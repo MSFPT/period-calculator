@@ -1,0 +1,54 @@
+{
+    "short_name": "Period Calculator",
+    "name": "Period length Calculator",
+    "description": "This free calculator estimates days in the future during which a person is expected to undergo their period, based on information of previous periods.",
+    "categories": [
+        "period-length-calculator",
+        "period-calculator",
+        "calculator",
+        "period-calculator",
+        "free",
+        "online",
+        "msfpt"
+    ],
+    "display_override": [
+        "fullscreen",
+        "minimal-ui"
+    ],
+    "display": "standalone",
+    "lang": "en_US",
+    "dir": "auto",
+    "start_url": "/period-calculator",
+    "scope": "/period-calculator",
+    "icons": [
+        {
+            "src": "assets/icons/favicon-16x16.png",
+            "sizes": "16x16",
+            "type": "image/png"
+        },
+        {
+            "src": "assets/icons/favicon-32x32.png",
+            "sizes": "32x32",
+            "type": "image/png"
+        },
+        {
+            "src": "assets/icons/android-chrome-192x192.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+            "src": "assets/icons/android-chrome-512x512.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        }
+    ],
+    "background_color": "#ED4592",
+    "theme_color": "#ffc8c8",
+    "screenshots": [
+        {
+            "src": "assets/icons/android-chrome-512x512.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        }
+    ]
+}

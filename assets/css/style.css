@@ -1,0 +1,310 @@
+@charset "UTF-8";
+@import url("reset.css");
+@import url("data:text/css;base64,QGNoYXJzZXQgIlVURi04IjtAbWVkaWEgcHJpbnR7KntkaXNwbGF5OiBub25lICFpbXBvcnRhbnQ7fX0=");
+@import url("https://msfpt.github.io/scrollbarcss/scrollbar.css");
+
+@font-face {
+  font-family: "fa-danstevis";
+  src: url("fonts/fa-dastnevis.otf");
+}
+
+a {
+  outline: none;
+  cursor: pointer;
+  text-decoration: none;
+  color: #b0ecf9;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+  overflow: hidden;
+  background: #ED4592 linear-gradient(315deg, #FF6781 2%, #FA5FA2 38%, #ED4592 68%, #FF80B1 98%);
+  animation: gradient 15s ease infinite;
+  background-attachment: fixed;
+  background-size: 400% 400%;
+  user-select: none;
+  user-zoom: none;
+}
+
+body:not(body.show_dialog) #select_language {
+  opacity: 0;
+  z-index: -7;
+}
+
+#select_language {
+  transition: opacity .4s ease-in-out;
+  background-color: rgb(0 0 0 / 20%);
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  z-index: 2002;
+  top: 0;
+  left: 0;
+  opacity: 1;
+}
+
+body:not(body.show_dialog) #select_language > [role="dialog"] {
+  top: -200px;
+}
+
+body #select_language > [role="dialog"] {
+  transition: top .4s ease-in-out;
+  overflow: hidden;
+  background-color: #252e39;
+  padding: 10px 12px;
+  width: calc(100% - 24px);
+  height: calc(var(--dialog-height) - 20px);
+  max-height: calc(var(--dialog-height) - 20px);
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  z-index: 2000;
+  top: 0;
+  left: 0;
+}
+
+body #select_language > [role="dialog"] p {
+  opacity: 0.98;
+  color: #ffffff;
+  font-size: 18px;
+  font-family: "fa-danstevis", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+body #select_language > [role="dialog"] .btns {
+  display: flex;
+  flex-flow: row nowrap;
+}
+
+body #select_language > [role="dialog"] .btns button {
+  font-family: "fa-danstevis", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  transition: background-color .3s ease-in-out;
+  background-color: transparent;
+  cursor: pointer;
+  font-size: 18px;
+  color: #39dbff;
+  outline: none;
+  border: 0;
+  text-align: center;
+  border-radius: 3px;
+  padding: 3px 5px;
+  min-width: 30px;
+}
+
+body #select_language > [role="dialog"] .btns button:hover {
+    background-color: rgb(136 145 156 / 25%);
+}
+
+body #select_language > [role="dialog"] .btns button[title="Yes"] {
+  margin-left: 7px;
+}
+
+body #select_language > [role="dialog"] .btns button[title="No"] {
+  margin-right: 7px;
+}
+
+@keyframes gradient {
+  0%   { background-position: 0%   0%  ; }
+  50%  { background-position: 100% 100%; }
+  100% { background-position: 0%   0%  ; }
+}
+
+#about-period {
+  overflow: hidden scroll;
+  transition: top 1s ease, opacity 1s ease;
+  background-color: #FF6781;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  color: rgb(255 255 255 / 90%);
+  padding: 50px 15px 20px;
+  width: calc(100% - 30px);
+  height: calc(100% - 70px);
+  position: fixed;
+  top: 300%;
+  left: 0;
+  z-index: 1000;
+  opacity: 0;
+}
+
+#about-period:target {
+  top: 0 !important;
+  opacity: 1 !important;
+}
+
+#about-period .close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: min-content;
+  height: min-content;
+}
+
+#about-period.lang_fa .close {
+  right: unset !important;
+  left: 20px;
+}
+
+#about-period .close svg {
+  fill: rgb(255 255 255 / 80%);
+  width: 25px;
+  height: 25px;
+}
+
+#about-period:not(.lang_fa) .lang-fa {
+  display: none;
+}
+
+#about-period.lang_fa .lang-fa {
+  display: flex;
+  flex-flow: column nowrap;
+  font-family: "fa-danstevis", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+#about-period.lang_fa .lang-en {
+  display: none !important;
+}
+
+#about-period .title {
+  margin: 20px 0 25px;
+}
+
+#about-period:not(.lang_fa) .lang-en .title {
+  font-size: 26px;
+}
+
+#about-period.lang_fa .lang-fa .title {
+  font-size: 28px;
+}
+
+#about-period .paragraph {
+  margin: 15px 0;
+  font-size: 16px;
+}
+
+#about-period.lang_fa .paragraph {
+  font-size: 20px;
+  line-height: 25px;
+}
+
+#en_box, #fa_box {
+  overflow: hidden scroll;
+  padding: 200px 0;
+  background-color: #c61c1c27;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: flex-start;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+#en_box {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+#fa_box {
+  font-family: "fa-danstevis", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+#en_box .title ,
+#fa_box .title {
+  color: #fff;
+  opacity: 0.95;
+}
+
+#en_box .title {
+  font-size: 24px;
+  margin: 0 auto 10px 12px;
+}
+
+#fa_box .title {
+  font-size: 28px;
+  margin: 0 12px 10px auto;
+}
+
+.panel {
+  background: rgb(250 250 250 / 25%);
+  box-shadow: 0px 0px 1px rgb(200 20 20 / 25%);
+  border-radius: 2px;
+  padding: 15px 10px;
+  min-width: 250px;
+  max-width: 520px;
+  width: calc(100% - 50px);
+  min-height: 200px;
+  margin: 20px 0;
+}
+
+/* It is temporary */
+.panel {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 22px;
+}
+
+a[href="#about-period"] {
+  font-size: 18px;
+}
+
+#github_link {
+  font-size: 16px;
+  color: #FFF;
+  font-family: Arial, Helvetica, sans-serif;
+  position: fixed;
+  z-index: 7000;
+  left: 12px;
+  bottom: -50%;
+  transition: bottom .2s ease-in-out;
+}
+
+:hover #github_link {
+  bottom: 12px;
+}
+
+#waves .wave {
+  background: rgb(255 255 255 / 25%);
+  border-radius: 1000% 1000% 0 0;
+  position: fixed;
+  width: 200%;
+  height: 12em;
+  animation: wave 10s -3s linear infinite;
+  transform: translate3d(0, 0, 0);
+  opacity: 0.8;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+}
+
+@media screen and (max-height: 800px) { #waves .wave { height: 10em; } }
+
+@media screen and (max-height: 580px) { #waves .wave { height: 7em ; } }
+
+#waves .wave:nth-of-type(2) {
+  animation: wave 18s linear reverse infinite;
+  bottom: -1.25em;
+  opacity: 0.8;
+}
+
+#waves .wave:nth-of-type(3) {
+  animation: wave 20s -1s reverse infinite;
+  bottom: -2.5em;
+  opacity: 0.9;
+}
+
+@keyframes wave {
+  2%   { transform: translateX(1)   ; }
+  25%  { transform: translateX(-25%); }
+  50%  { transform: translateX(-50%); }
+  75%  { transform: translateX(-25%); }
+  100% { transform: translateX(1)   ; }
+}
+
+.hide {
+  display: none !important;
+}
