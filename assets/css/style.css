@@ -281,9 +281,15 @@ a[href="#about-period"] {
   z-index: -1;
 }
 
-@media screen and (max-height: 800px) { #waves .wave { height: 10em; } }
+@media screen and (max-height: 800px) {
+  #en_box, #fa_box { padding: 10em 0; }
+  #waves .wave { height: 10em; }
+}
 
-@media screen and (max-height: 580px) { #waves .wave { height: 7em ; } }
+@media screen and (max-height: 580px) {
+  #en_box, #fa_box { padding: 7em 0; }
+  #waves .wave { height:  7em; }
+}
 
 #waves .wave:nth-of-type(2) {
   animation: wave 18s linear reverse infinite;
