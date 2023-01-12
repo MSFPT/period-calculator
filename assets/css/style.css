@@ -286,9 +286,14 @@ a[href="#about-period"] {
   #waves .wave { height: 10em; }
 }
 
-@media screen and (max-height: 580px) {
+@media screen and (max-height: 670px) {
   #en_box, #fa_box { padding: 7em 0; }
   #waves .wave { height:  7em; }
+}
+
+@media screen and (max-height: 560px) {
+  #en_box, #fa_box { padding: 5em 0; }
+  #waves .wave { display: none !important; }
 }
 
 #waves .wave:nth-of-type(2) {
