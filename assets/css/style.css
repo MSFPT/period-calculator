@@ -220,15 +220,14 @@ body #select_language > [role="dialog"] .btns button[title="No"] {
 
 #en_box .title {
   font-size: 24px;
-  margin: 0 auto 10px 12px;
 }
 
 #fa_box .title {
   font-size: 28px;
-  margin: 0 12px 10px auto;
 }
 
 .panel {
+  backdrop-filter: blur(4px);
   background: rgb(250 250 250 / 25%);
   box-shadow: 0px 0px 1px rgb(200 20 20 / 25%);
   border-radius: 2px;
@@ -236,16 +235,110 @@ body #select_language > [role="dialog"] .btns button[title="No"] {
   min-width: 250px;
   max-width: 520px;
   width: calc(100% - 50px);
-  min-height: 200px;
+  min-height: 100px;
   margin: 20px 0;
 }
 
-/* It is temporary */
 .panel {
+  position: relative;
+  padding-bottom: 75px;
   display: flex;
+  flex-flow: column nowrap;
   justify-content: center;
   align-items: center;
   font-size: 22px;
+}
+
+.panel .q-box {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  width: calc(100% - 10px);
+  margin: 7px;
+}
+
+.panel .q-box.wrap {
+  flex-wrap: wrap !important;
+}
+
+.panel .q-box .date {
+  min-width: 200px;
+  margin: 0 5px;
+}
+
+.panel .q-box .date select {
+  margin: 0 2px;
+}
+
+select,
+select * {
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  padding: 6px 8px;
+  cursor: pointer;
+  border-radius: 5px;
+  background-color: #f78dc1;
+  font-size: 16px !important;
+  color: #111;
+  outline: none;
+  border: 0;
+}
+
+select::-ms-expand {
+  display: none;
+}
+
+.panel .q-box select[name="clength"] {
+  width: 70px;
+}
+
+.panel .q-box select {
+  margin: 0 7px;
+}
+
+#form_fa .q-box select {
+  width: 50px;
+  padding: 3px 5px;
+  font-size: 17px !important;
+  font-family: "fa-danstevis", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+.panel label.title {
+  font-size: 18px !important;
+}
+
+.panel button[type="submit"] {
+  position: absolute;
+  bottom: 15px;
+  background: rgb(255 233 233 / 53%);
+  border: 1px solid #de9cb7;
+  padding: 15px 20px;
+  border-radius: 3px;
+  margin-top: 20px;
+  text-transform: uppercase;
+  box-sizing: border-box;
+  font-weight: 600;
+  color: #382b22;
+  font-size: 15px;
+  transition: all 150ms cubic-bezier(0, 0, 0.58, 1);
+}
+
+#form_en button[type="submit"] {
+  box-shadow: 5px 5px 2px 0 rgba(255, 227, 226, 0.25);
+  right: 20px;
+}
+
+#form_fa button[type="submit"] {
+  box-shadow: -5px 5px 2px 0 rgba(255, 227, 226, 0.25);
+  left: 15px;
+}
+
+.panel button[type="submit"]:hover {
+  transform: translate(0, -3px);
 }
 
 a[href="#about-period"] {

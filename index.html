@@ -32,8 +32,11 @@
     <link rel="canonical" href="https://msfpt.github.io/period-calculator/"/>
     
     <link rel="manifest" href="manifest.json">
-    <link rel="stylesheet" href="./assets/css/style.css">
-    <script type="text/javascript" src="./assets/js/script.js"></script>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <noscript>
+      <link rel="stylesheet" href="data:text/css;base64,QGNoYXJzZXQgIlVURi04Ijsjc2VsZWN0X2xhbmd1YWdlLCNlbl9ib3gsI2ZhX2JveHtkaXNwbGF5Om5vbmUgIWltcG9ydGFudDt9Ym9keXtkaXNwbGF5OmZsZXg7anVzdGlmeS1jb250ZW50OmNlbnRlcjthbGlnbi1pdGVtczpjZW50ZXI7aGVpZ2h0OjEwMHZoO30jbm9zY3JpcHR7Zm9udC1zaXplOmNhbGMoMTJweCArIDJ2dyk7Y29sb3I6IzExMTt9">
+    </noscript>
+    <script type="text/javascript" src="assets/js/script.js"></script>
   </head>
   <body>
     <section id="select_language">
@@ -62,14 +65,123 @@
             <p class="paragraph">پریود، یک اصطلاح رایج برای اشاره به قاعدگی، تخلیه منظم خون و بافت مخاطی زنان است که به عنوان بخشی از چرخه قاعدگی رخ می دهد. خونریزی و ترشح مخاط رحم از طریق واژن معمولا بین 2 تا 7 روز طول می کشد. این در مراحل اولیه چرخه قاعدگی رخ می دهد که به آن مرحله قاعدگی گفته می شود، که زمانی شروع می شود که تخمک سیکل قبلی بارور نشود. پریودها در دوران بارداری متوقف می شوند و معمولاً در مراحل اولیه شیردهی از سر نمی گیرند. پریودها نیز در طول یائسگی، معمولاً در سنین 49 تا 52 سالگی، در نهایت به طور دائم متوقف می‌شوند و می‌توان آن را بدون خونریزی واژن برای یک سال تعریف کرد.</p>
         </div>
     </section>
+    <noscript>
+      <p id="noscript">JavaScript is disabled!</p>
+    </noscript>
     <section id="en_box" lang="en" dir="ltr" scrollbar="hide">
       <h1 class="title">Period Calculator</h1>
-      <form id="form_en" class="panel">coming soon...</form>
+      <form id="form_en" class="panel">
+        <div class="q-box">
+          <label class="title"><b>First Day</b> of Your Last Period: </label>
+          <div class="date">
+            <select name="date_year_en" id="date_year_en" scrollbar="hide" style="width: 70px;"></select>
+            <select name="date_month_en" id="date_month_en" scrollbar="hide"></select>
+            <select name="date_day_en" id="date_day_en" scrollbar="hide"></select>
+          </div>
+        </div>
+        <div class="q-box">
+          <label class="title">How long did it last?</label>
+          <select name="clength" id="clength_en" scrollbar="hide">
+            <option value="1">1 day</option>
+            <option value="2">2 days</option>
+            <option value="3">3 days</option>
+            <option value="4">4 days</option>
+            <option value="5" selected>5 days</option>
+            <option value="6">6 days</option>
+            <option value="7">7 days</option>
+            <option value="8">8 days</option>
+            <option value="9">9 days</option>
+            <option value="10">10 days</option>
+          </select>
+        </div>
+        <div class="q-box">
+          <label class="title">Average Length of Cycles: </label>
+          <select name="ccycle" id="ccycle_en" scrollbar="hide">
+            <option value="22">22 days</option>
+            <option value="23">23 days</option>
+            <option value="24">24 days</option>
+            <option value="25">25 days</option>
+            <option value="26">26 days</option>
+            <option value="27">27 days</option>
+            <option value="28" selected>28 days</option>
+            <option value="29">29 days</option>
+            <option value="30">30 days</option>
+            <option value="31">31 days</option>
+            <option value="32">32 days</option>
+            <option value="33">33 days</option>
+            <option value="34">34 days</option>
+            <option value="35">35 days</option>
+            <option value="36">36 days</option>
+            <option value="37">37 days</option>
+            <option value="38">38 days</option>
+            <option value="39">39 days</option>
+            <option value="40">40 days</option>
+            <option value="41">41 days</option>
+            <option value="42">42 days</option>
+            <option value="43">43 days</option>
+            <option value="44">44 days</option>
+          </select>
+        </div>
+        <button type="submit">Calculate</button>
+      </form>
       <a href="#about-period">What is the menstrual period?</a>
     </section>
     <section id="fa_box" lang="fa" dir="rtl" scrollbar="hide" class="hide">
       <h1 class="title">محاسبه طول دوره قاعدگی</h1>
-      <form id="form_fa" class="panel">به زودی...</form>
+      <form id="form_fa" class="panel">
+        <div class="q-box">
+          <label class="title"><b>اولین روز</b> آخرین پریود شما: </label>
+          <div class="date">
+            <select name="date_year_fa" id="date_year_fa" scrollbar="hide" style="width: 40px;"></select>
+            <select name="date_month_fa" id="date_month_fa" scrollbar="hide" style="width: 70px;"></select>
+            <select name="date_day_fa" id="date_day_fa" scrollbar="hide" style="width: 30px;"></select>
+          </div>
+        </div>
+        <div class="q-box">
+          <label class="title">چقدر طول کشید؟</label>
+          <select name="clength" id="clength_fa">
+            <option value="1">1 روز</option>
+            <option value="2">2 روز</option>
+            <option value="3">3 روز</option>
+            <option value="4">4 روز</option>
+            <option value="5" selected>5 روز</option>
+            <option value="6">6 روز</option>
+            <option value="7">7 روز</option>
+            <option value="8">8 روز</option>
+            <option value="9">9 روز</option>
+            <option value="10">10 روز</option>
+          </select>
+        </div>
+        <div class="q-box">
+          <label class="title">میانگین طول دوره ها: </label>
+          <select name="ccycle" id="ccycle_fa" scrollbar="hide">
+            <option value="22">22 روز</option>
+            <option value="23">23 روز</option>
+            <option value="24">24 روز</option>
+            <option value="25">25 روز</option>
+            <option value="26">26 روز</option>
+            <option value="27">27 روز</option>
+            <option value="28" selected>28 روز</option>
+            <option value="29">29 روز</option>
+            <option value="30">30 روز</option>
+            <option value="31">31 روز</option>
+            <option value="32">32 روز</option>
+            <option value="33">33 روز</option>
+            <option value="34">34 روز</option>
+            <option value="35">35 روز</option>
+            <option value="36">36 روز</option>
+            <option value="37">37 روز</option>
+            <option value="38">38 روز</option>
+            <option value="39">39 روز</option>
+            <option value="40">40 روز</option>
+            <option value="41">41 روز</option>
+            <option value="42">42 روز</option>
+            <option value="43">43 روز</option>
+            <option value="44">44 روز</option>
+          </select>
+        </div>
+        <button type="submit">محاسبه</button>
+      </form>
       <a href="#about-period">دوره قاعدگی چیست؟</a>
     </section>
     <a href="https://github.com/msfpt/period-calculator" id="github_link" target="_blank">made by msfpt</a>
